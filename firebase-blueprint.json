@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "DocumentData": {
+      "title": "DocumentData",
+      "description": "JSON serialized data of the school system",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Stringified JSON data"
+        }
+      },
+      "required": ["value"]
+    }
+  },
+  "firestore": {
+    "colegio_data/{docId}": {
+      "schema": { "$ref": "#/entities/DocumentData" },
+      "description": "General system configuration and data collections serialized to JSON strings."
+    }
+  }
+}
